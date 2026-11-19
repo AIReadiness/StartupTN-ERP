@@ -36,8 +36,8 @@ export interface OrgSettings {
 }
 
 export const SETTING_DEFAULTS: OrgSettings = {
-  work_start: '09:30',
-  grace_minutes: 15,
+  work_start: '10:00',
+  grace_minutes: 5,
   full_day_minutes: 480,
   half_day_minutes: 240,
   weekly_off_days: [0, 6],

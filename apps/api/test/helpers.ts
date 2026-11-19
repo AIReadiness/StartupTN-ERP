@@ -90,6 +90,7 @@ export async function createTestEnv(overrides: Partial<AppConfig> = {}, customis
 export async function resetData(db: Db) {
   await db.query('truncate audit_log');
   for (const sql of [
+    'delete from projects',
     'delete from email_outbox',
     'delete from biometric_punches',
     'delete from biometric_imports',

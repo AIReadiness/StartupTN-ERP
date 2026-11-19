@@ -14,13 +14,14 @@ import { JobsModule } from './jobs/jobs.module';
 import { LeaveModule } from './leave/leave.module';
 import { OdModule } from './od/od.module';
 import { OrgModule } from './org/org.module';
+import { ProjectsModule } from './projects/projects.module';
 
 @Module({})
 export class AppModule {
   static register(config: AppConfig): DynamicModule {
     return {
       module: AppModule,
-      imports: [CommonModule.register(config), AuthModule, EmployeesModule, OrgModule, ApprovalsModule, LeaveModule, OdModule, AttendanceModule, DocumentsModule, DashboardModule, JobsModule],
+      imports: [CommonModule.register(config), AuthModule, EmployeesModule, OrgModule, ApprovalsModule, LeaveModule, OdModule, AttendanceModule, DocumentsModule, ProjectsModule, DashboardModule, JobsModule],
       controllers: [HealthController],
       providers: [{ provide: APP_GUARD, useClass: AuthGuard }],
     };

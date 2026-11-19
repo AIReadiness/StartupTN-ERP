@@ -1,0 +1,1184 @@
+{
+ "fy": "FY 2026-27",
+ "groups": [
+  "Funding",
+  "Venture Studio",
+  "Catalyst",
+  "Artificial Intelligence",
+  "Enabling Horizontals"
+ ],
+ "designations": [
+  "AVP",
+  "Hub AVP",
+  "Project Lead",
+  "Project Associate",
+  "Vertical Head",
+  "Shared Services",
+  "Support Staff"
+ ],
+ "projects": [
+  {
+   "code": "F1",
+   "group": "Funding",
+   "name": "Start Smart Seed Fund",
+   "budget": "₹10.42 Cr",
+   "kpis": [
+    {
+     "name": "Startups funded — Venture Studio Track",
+     "target": 20,
+     "unit": "startups"
+    },
+    {
+     "name": "Startups funded — Open Track",
+     "target": 50,
+     "unit": "startups"
+    },
+    {
+     "name": "Avg. application-to-disbursement time (target ≤)",
+     "target": 60,
+     "unit": "days"
+    }
+   ],
+   "milestones": [],
+   "team": [
+    {
+     "person": "nikunj",
+     "designation": "AVP"
+    },
+    {
+     "person": "bharathakumar",
+     "designation": "Project Lead"
+    },
+    {
+     "person": "ragesh",
+     "designation": "Project Associate"
+    },
+    {
+     "person": "renuka",
+     "designation": "Project Associate"
+    }
+   ]
+  },
+  {
+   "code": "F2",
+   "group": "Funding",
+   "name": "TANFUND",
+   "budget": "₹70 L",
+   "kpis": [
+    {
+     "name": "Total startup pitches enabled",
+     "target": 100,
+     "unit": "pitches"
+    },
+    {
+     "name": "New investors onboarded onto the platform",
+     "target": 100,
+     "unit": "investors"
+    },
+    {
+     "name": "Matches via AI-powered matchmaking",
+     "target": 500,
+     "unit": "matches"
+    },
+    {
+     "name": "Capital raised by startups through TANFUND",
+     "target": 250,
+     "unit": "₹ Cr"
+    },
+    {
+     "name": "Startups securing credit via credit access",
+     "target": 100,
+     "unit": "startups"
+    },
+    {
+     "name": "SME IPO Readiness Program sessions",
+     "target": 5,
+     "unit": "sessions"
+    }
+   ],
+   "milestones": [],
+   "team": [
+    {
+     "person": "sai",
+     "designation": "AVP"
+    },
+    {
+     "person": "suganya",
+     "designation": "Project Lead"
+    },
+    {
+     "person": "nithya",
+     "designation": "Project Associate"
+    }
+   ]
+  },
+  {
+   "code": "F3",
+   "group": "Funding",
+   "name": "Social Justice Startup Fund (TN SC/ST Fund)",
+   "budget": "₹35 Cr corpus",
+   "kpis": [
+    {
+     "name": "Startups funded — Social Justice Seed Fund",
+     "target": 40,
+     "unit": "startups"
+    },
+    {
+     "name": "Startups funded — Social Justice Growth Fund",
+     "target": 30,
+     "unit": "startups"
+    },
+    {
+     "name": "Startups invested this year (₹30 Cr proposed)",
+     "target": 20,
+     "unit": "startups"
+    }
+   ],
+   "milestones": [],
+   "team": [
+    {
+     "person": "stalin",
+     "designation": "AVP"
+    },
+    {
+     "person": "ramajeyam",
+     "designation": "Project Lead"
+    },
+    {
+     "person": "suman",
+     "designation": "Project Associate"
+    },
+    {
+     "person": "manoj",
+     "designation": "Project Associate"
+    }
+   ]
+  },
+  {
+   "code": "F4",
+   "group": "Funding",
+   "name": "TN Transgender & Differently Abled Startup Fund",
+   "budget": "₹1 Cr",
+   "kpis": [
+    {
+     "name": "Startups funded",
+     "target": 20,
+     "unit": "startups"
+    }
+   ],
+   "milestones": [],
+   "team": [
+    {
+     "person": "sridevi",
+     "designation": "AVP"
+    },
+    {
+     "person": "venkadeswari",
+     "designation": "Project Lead"
+    }
+   ]
+  },
+  {
+   "code": "F5",
+   "group": "Funding",
+   "name": "Women Incubation Incentive",
+   "budget": "₹50 L",
+   "kpis": [
+    {
+     "name": "Women founders supported (₹25,000 reimbursement)",
+     "target": 300,
+     "unit": "founders"
+    }
+   ],
+   "milestones": [],
+   "team": [
+    {
+     "person": "prem",
+     "designation": "AVP"
+    },
+    {
+     "person": "kavimukil",
+     "designation": "Project Lead"
+    }
+   ]
+  },
+  {
+   "code": "N1",
+   "group": "Venture Studio",
+   "name": "Coimbatore Mfg Venture Studio",
+   "budget": "₹5 Cr (combined w/ Chennai)",
+   "kpis": [
+    {
+     "name": "Hub upgraded to Incubator cum Venture Studio",
+     "target": 1,
+     "unit": "hub"
+    },
+    {
+     "name": "Venture Studio cohort run",
+     "target": 1,
+     "unit": "cohort"
+    },
+    {
+     "name": "Startups on Venture Studio Track per cohort (min)",
+     "target": 5,
+     "unit": "startups"
+    },
+    {
+     "name": "Ventures formally incorporated from VS Track",
+     "target": 10,
+     "unit": "ventures"
+    },
+    {
+     "name": "Sector-focused incubation cohorts run",
+     "target": 1,
+     "unit": "cohorts"
+    },
+    {
+     "name": "Sector-agnostic cohorts run",
+     "target": 1,
+     "unit": "cohorts"
+    },
+    {
+     "name": "Studio startups funded via Start Smart Seed Fund",
+     "target": 20,
+     "unit": "startups"
+    }
+   ],
+   "milestones": [],
+   "team": [
+    {
+     "person": "akila",
+     "designation": "AVP"
+    },
+    {
+     "person": "gayathri",
+     "designation": "Project Lead"
+    },
+    {
+     "person": "rajsekar",
+     "designation": "Project Associate"
+    }
+   ]
+  },
+  {
+   "code": "N2",
+   "group": "Venture Studio",
+   "name": "Chennai AI Venture Studio",
+   "budget": "₹5 Cr (combined w/ Coimbatore)",
+   "kpis": [
+    {
+     "name": "Hub upgraded to Incubator cum Venture Studio",
+     "target": 1,
+     "unit": "hub"
+    },
+    {
+     "name": "Venture Studio cohort run",
+     "target": 1,
+     "unit": "cohort"
+    },
+    {
+     "name": "Startups on Venture Studio Track per cohort (min)",
+     "target": 5,
+     "unit": "startups"
+    },
+    {
+     "name": "Ventures formally incorporated from VS Track",
+     "target": 10,
+     "unit": "ventures"
+    },
+    {
+     "name": "Sector-focused incubation cohorts run",
+     "target": 1,
+     "unit": "cohorts"
+    },
+    {
+     "name": "Sector-agnostic cohorts run",
+     "target": 1,
+     "unit": "cohorts"
+    },
+    {
+     "name": "Startups onboarded to AIMPACT marketplace",
+     "target": 100,
+     "unit": "%"
+    }
+   ],
+   "milestones": [],
+   "team": [
+    {
+     "person": "rajan",
+     "designation": "AVP"
+    },
+    {
+     "person": "sakhtipriya",
+     "designation": "Project Associate"
+    }
+   ]
+  },
+  {
+   "code": "N2-Hub",
+   "group": "Venture Studio",
+   "name": "Chennai Hub (Shared Services)",
+   "budget": "—",
+   "kpis": [],
+   "milestones": [],
+   "team": [
+    {
+     "person": "prem",
+     "designation": "AVP"
+    },
+    {
+     "person": "poongodi",
+     "designation": "Project Lead"
+    },
+    {
+     "person": "sakhtipriya",
+     "designation": "Project Associate"
+    }
+   ]
+  },
+  {
+   "code": "C1",
+   "group": "Catalyst",
+   "name": "Pre-Incubation Centers (PIC 2.0)",
+   "budget": "₹75 L",
+   "kpis": [
+    {
+     "name": "New PICs established",
+     "target": 100,
+     "unit": "PICs"
+    },
+    {
+     "name": "Student founders / ideas taken through validation",
+     "target": 20,
+     "unit": "per PIC"
+    },
+    {
+     "name": "PICs transitioned to full Incubation Centres",
+     "target": 5,
+     "unit": "PICs"
+    },
+    {
+     "name": "Partner events conducted by PICs",
+     "target": 1,
+     "unit": "per PIC"
+    }
+   ],
+   "milestones": [],
+   "team": []
+  },
+  {
+   "code": "C2",
+   "group": "Catalyst",
+   "name": "Incubation Capability Program",
+   "budget": "₹30 L",
+   "kpis": [
+    {
+     "name": "Incubators enrolled in the program",
+     "target": 75,
+     "unit": "incubators"
+    },
+    {
+     "name": "Incubator managers certified",
+     "target": 75,
+     "unit": "managers"
+    },
+    {
+     "name": "Incubators on the Resource Sharing Network",
+     "target": 50,
+     "unit": "incubators"
+    },
+    {
+     "name": "Final reports submitted by participating incubators",
+     "target": 100,
+     "unit": "%"
+    }
+   ],
+   "milestones": [
+    {
+     "title": "State-level Incubation Capability Report published",
+     "due": "2027-03-31"
+    }
+   ],
+   "team": [
+    {
+     "person": "prem",
+     "designation": "AVP"
+    },
+    {
+     "person": "aneesh",
+     "designation": "Project Lead"
+    },
+    {
+     "person": "dhaya",
+     "designation": "Project Associate"
+    }
+   ]
+  },
+  {
+   "code": "C3",
+   "group": "Catalyst",
+   "name": "Partner Events",
+   "budget": "₹40 L",
+   "kpis": [
+    {
+     "name": "Partner events supported with grant",
+     "target": 200,
+     "unit": "events"
+    },
+    {
+     "name": "Total attendee footfall",
+     "target": 25000,
+     "unit": "attendees"
+    },
+    {
+     "name": "QR-code scans converted to registered participants",
+     "target": 50,
+     "unit": "% of footfall"
+    }
+   ],
+   "milestones": [],
+   "team": []
+  },
+  {
+   "code": "C4",
+   "group": "Catalyst",
+   "name": "Corporate Innovation",
+   "budget": "₹10 L",
+   "kpis": [
+    {
+     "name": "Challenges / hackathons conducted",
+     "target": 20,
+     "unit": "events"
+    },
+    {
+     "name": "New corporates onboarded with MoU",
+     "target": 20,
+     "unit": "corporates"
+    }
+   ],
+   "milestones": [
+    {
+     "title": "Corporate Innovation Outcome Report",
+     "due": "2027-03-31"
+    }
+   ],
+   "team": [
+    {
+     "person": "sridevi",
+     "designation": "AVP"
+    },
+    {
+     "person": "subramanian",
+     "designation": "Project Lead"
+    }
+   ]
+  },
+  {
+   "code": "C5",
+   "group": "Catalyst",
+   "name": "Founder First Card",
+   "budget": "₹10 L",
+   "kpis": [
+    {
+     "name": "New service-provider partners onboarded",
+     "target": 200,
+     "unit": "partners"
+    },
+    {
+     "name": "New startups availed Founder First Card",
+     "target": 2000,
+     "unit": "startups"
+    },
+    {
+     "name": "Founder First benefits derived by startups",
+     "target": 20,
+     "unit": "₹ Cr"
+    }
+   ],
+   "milestones": [],
+   "team": [
+    {
+     "person": "ezhlil",
+     "designation": "AVP"
+    },
+    {
+     "person": "maran",
+     "designation": "Project Associate"
+    },
+    {
+     "person": "udhay",
+     "designation": "Project Associate"
+    }
+   ]
+  },
+  {
+   "code": "C6",
+   "group": "Catalyst",
+   "name": "Tech Transfer",
+   "budget": "₹50 L",
+   "kpis": [
+    {
+     "name": "Research institution MoUs signed",
+     "target": 20,
+     "unit": "MoUs"
+    },
+    {
+     "name": "Structured tech-transfer conversations facilitated",
+     "target": 50,
+     "unit": "conversations"
+    },
+    {
+     "name": "Conversations converted to licensing / collaboration",
+     "target": 10,
+     "unit": "conversions"
+    }
+   ],
+   "milestones": [],
+   "team": []
+  },
+  {
+   "code": "C7",
+   "group": "Catalyst",
+   "name": "Reach StartupTN (Call Center)",
+   "budget": "₹20 L",
+   "kpis": [
+    {
+     "name": "SLA compliance",
+     "target": 90,
+     "unit": "%"
+    },
+    {
+     "name": "Reduction in live-agent low-complexity queries",
+     "target": 20,
+     "unit": "% vs Q1"
+    }
+   ],
+   "milestones": [
+    {
+     "title": "WhatsApp chatbot / FAQ bot launch",
+     "due": "2026-09-30"
+    }
+   ],
+   "team": []
+  },
+  {
+   "code": "C8",
+   "group": "Catalyst",
+   "name": "S2G — Startup to Government",
+   "budget": "₹9 L",
+   "kpis": [
+    {
+     "name": "Government opportunities listed",
+     "target": 60,
+     "unit": "opportunities"
+    },
+    {
+     "name": "S2G Connect events (online / offline)",
+     "target": 30,
+     "unit": "events"
+    },
+    {
+     "name": "Structured pilots facilitated",
+     "target": 40,
+     "unit": "pilots"
+    },
+    {
+     "name": "Startups reaching completed procurement order",
+     "target": 30,
+     "unit": "startups"
+    }
+   ],
+   "milestones": [],
+   "team": [
+    {
+     "person": "ezhlil",
+     "designation": "AVP"
+    },
+    {
+     "person": "maran",
+     "designation": "Project Associate"
+    },
+    {
+     "person": "udhay",
+     "designation": "Project Associate"
+    }
+   ]
+  },
+  {
+   "code": "C9",
+   "group": "Catalyst",
+   "name": "Regional Hub Network",
+   "budget": "₹22 L",
+   "kpis": [
+    {
+     "name": "New startups onboarded",
+     "target": 2000,
+     "unit": "startups"
+    },
+    {
+     "name": "Existing startups supported",
+     "target": 2000,
+     "unit": "startups"
+    },
+    {
+     "name": "Monthly open meetups across locations",
+     "target": 120,
+     "unit": "meetups"
+    },
+    {
+     "name": "Average attendance per meetup",
+     "target": 50,
+     "unit": "attendees"
+    }
+   ],
+   "milestones": [
+    {
+     "title": "CRM build & state startup data logging — 100%",
+     "due": "2026-09-30"
+    }
+   ],
+   "team": []
+  },
+  {
+   "code": "C10",
+   "group": "Catalyst",
+   "name": "Global Startup Connect",
+   "budget": "₹50 L",
+   "kpis": [
+    {
+     "name": "Startups supported — international delegations (2)",
+     "target": 20,
+     "unit": "startups"
+    },
+    {
+     "name": "Startups supported — national delegations (5)",
+     "target": 50,
+     "unit": "startups"
+    }
+   ],
+   "milestones": [],
+   "team": [
+    {
+     "person": "sridevi",
+     "designation": "AVP"
+    },
+    {
+     "person": "poongodi",
+     "designation": "Project Lead"
+    }
+   ]
+  },
+  {
+   "code": "C9-Hosur",
+   "group": "Catalyst",
+   "name": "CRM Build & State Startup Data — Hosur Hub",
+   "budget": "—",
+   "kpis": [],
+   "milestones": [],
+   "team": [
+    {
+     "person": "gobinath",
+     "designation": "Project Lead"
+    },
+    {
+     "person": "deepak",
+     "designation": "Project Associate"
+    },
+    {
+     "person": "nikunj",
+     "designation": "Hub AVP"
+    }
+   ]
+  },
+  {
+   "code": "C9-Trichy",
+   "group": "Catalyst",
+   "name": "Startup Onboarding & DPIIT Registration — Trichy Hub",
+   "budget": "—",
+   "kpis": [],
+   "milestones": [],
+   "team": [
+    {
+     "person": "prashanti",
+     "designation": "Project Lead"
+    },
+    {
+     "person": "manojkumar",
+     "designation": "Project Associate"
+    },
+    {
+     "person": "stalin",
+     "designation": "Hub AVP"
+    }
+   ]
+  },
+  {
+   "code": "C9-Tvl",
+   "group": "Catalyst",
+   "name": "Startup Support & Benefit Delivery — Tirunelveli Hub",
+   "budget": "—",
+   "kpis": [],
+   "milestones": [],
+   "team": [
+    {
+     "person": "gigin",
+     "designation": "Project Lead"
+    },
+    {
+     "person": "nagathilagam",
+     "designation": "Project Associate"
+    },
+    {
+     "person": "prem",
+     "designation": "Hub AVP"
+    }
+   ]
+  },
+  {
+   "code": "C9-Madurai",
+   "group": "Catalyst",
+   "name": "Startup India Ranking — Madurai Hub",
+   "budget": "—",
+   "kpis": [],
+   "milestones": [],
+   "team": [
+    {
+     "person": "saktivel",
+     "designation": "Project Lead"
+    },
+    {
+     "person": "sai",
+     "designation": "Hub AVP"
+    }
+   ]
+  },
+  {
+   "code": "C9-Salem",
+   "group": "Catalyst",
+   "name": "AIMPACT / Venture Studio Founder Pipeline — Salem Hub",
+   "budget": "—",
+   "kpis": [],
+   "milestones": [],
+   "team": [
+    {
+     "person": "gobinath",
+     "designation": "Project Lead"
+    },
+    {
+     "person": "roshinie",
+     "designation": "Project Associate"
+    },
+    {
+     "person": "ezhlil",
+     "designation": "Hub AVP"
+    }
+   ]
+  },
+  {
+   "code": "C9-Cuddalore",
+   "group": "Catalyst",
+   "name": "Reach StartupTN — Cuddalore Hub",
+   "budget": "—",
+   "kpis": [],
+   "milestones": [],
+   "team": [
+    {
+     "person": "sentamil",
+     "designation": "Project Lead"
+    },
+    {
+     "person": "vibith",
+     "designation": "Project Associate"
+    },
+    {
+     "person": "hari",
+     "designation": "Hub AVP"
+    }
+   ]
+  },
+  {
+   "code": "C9-Thoothukudi",
+   "group": "Catalyst",
+   "name": "Pre-Incubation Centres — Thoothukudi Hub",
+   "budget": "—",
+   "kpis": [],
+   "milestones": [],
+   "team": [
+    {
+     "person": "gigin",
+     "designation": "Project Lead"
+    },
+    {
+     "person": "rahul",
+     "designation": "Hub AVP"
+    }
+   ]
+  },
+  {
+   "code": "C9-Erode",
+   "group": "Catalyst",
+   "name": "Partner Events — Erode Hub",
+   "budget": "—",
+   "kpis": [],
+   "milestones": [],
+   "team": [
+    {
+     "person": "gurushankar",
+     "designation": "Project Lead"
+    },
+    {
+     "person": "jayasurya",
+     "designation": "Project Associate"
+    },
+    {
+     "person": "sai",
+     "designation": "Hub AVP"
+    }
+   ]
+  },
+  {
+   "code": "C9-Thanjavur",
+   "group": "Catalyst",
+   "name": "Tech Transfers — Thanjavur Hub",
+   "budget": "—",
+   "kpis": [],
+   "milestones": [],
+   "team": [
+    {
+     "person": "karuppannan",
+     "designation": "Project Lead"
+    },
+    {
+     "person": "maheshkumar",
+     "designation": "Project Associate"
+    },
+    {
+     "person": "sridevi",
+     "designation": "Hub AVP"
+    }
+   ]
+  },
+  {
+   "code": "A1",
+   "group": "Artificial Intelligence",
+   "name": "AIMPACT — AI Marketplace",
+   "budget": "₹85 L",
+   "kpis": [
+    {
+     "name": "AI service providers registered & verified (supply)",
+     "target": 100,
+     "unit": "providers"
+    },
+    {
+     "name": "Consultants vetted & active (enablement layer)",
+     "target": 10,
+     "unit": "consultants"
+    },
+    {
+     "name": "Engagements completed with documented outcome",
+     "target": 30,
+     "unit": "engagements"
+    }
+   ],
+   "milestones": [],
+   "team": [
+    {
+     "person": "nikunj",
+     "designation": "AVP"
+    },
+    {
+     "person": "dhivya",
+     "designation": "Project Lead"
+    },
+    {
+     "person": "naveen",
+     "designation": "Project Associate"
+    }
+   ]
+  },
+  {
+   "code": "A1*",
+   "group": "Artificial Intelligence",
+   "name": "AIMPACT Onboarding",
+   "budget": "—",
+   "kpis": [
+    {
+     "name": "SMEs onboarded",
+     "target": 200,
+     "unit": "SMEs"
+    }
+   ],
+   "milestones": [],
+   "team": [
+    {
+     "person": "ezhlil",
+     "designation": "AVP"
+    },
+    {
+     "person": "gopalakrishnan",
+     "designation": "Project Lead"
+    }
+   ]
+  },
+  {
+   "code": "A2",
+   "group": "Artificial Intelligence",
+   "name": "AI Powered StartupTN",
+   "budget": "₹1.5 Cr",
+   "kpis": [
+    {
+     "name": "Internal processes audited & mapped for AI",
+     "target": 100,
+     "unit": "% across verticals"
+    },
+    {
+     "name": "Processes automated or AI-augmented",
+     "target": 20,
+     "unit": "processes"
+    },
+    {
+     "name": "Staff completing AI capability training",
+     "target": 100,
+     "unit": "% of staff"
+    }
+   ],
+   "milestones": [],
+   "team": [
+    {
+     "person": "nikunj",
+     "designation": "AVP"
+    },
+    {
+     "person": "dhivya",
+     "designation": "Project Lead"
+    }
+   ]
+  },
+  {
+   "code": "A3",
+   "group": "Artificial Intelligence",
+   "name": "StartupTN PULSE",
+   "budget": "₹4.36 Cr",
+   "kpis": [
+    {
+     "name": "AI agents built and deployed",
+     "target": 10,
+     "unit": "agents"
+    },
+    {
+     "name": "Founders using the tools deployed",
+     "target": 1000,
+     "unit": "founders"
+    }
+   ],
+   "milestones": [],
+   "team": [
+    {
+     "person": "nikunj",
+     "designation": "AVP"
+    },
+    {
+     "person": "dhivya",
+     "designation": "Project Lead"
+    }
+   ]
+  },
+  {
+   "code": "N2*",
+   "group": "Artificial Intelligence",
+   "name": "AI Venture Studio (Chennai)",
+   "budget": "—",
+   "kpis": [
+    {
+     "name": "Founders admitted to the Incubator Track",
+     "target": 20,
+     "unit": "founders"
+    },
+    {
+     "name": "Problem statements defined for VS Track",
+     "target": 10,
+     "unit": "statements"
+    },
+    {
+     "name": "Ventures reaching deployable product stage",
+     "target": 10,
+     "unit": "ventures"
+    },
+    {
+     "name": "Studio ventures listed on AIMPACT marketplace",
+     "target": 100,
+     "unit": "%"
+    }
+   ],
+   "milestones": [],
+   "team": []
+  },
+  {
+   "code": "H1",
+   "group": "Enabling Horizontals",
+   "name": "Admin & Operations",
+   "budget": "—",
+   "kpis": [],
+   "milestones": [],
+   "team": [
+    {
+     "person": "lakshmi",
+     "designation": "Project Lead"
+    },
+    {
+     "person": "gayatri",
+     "designation": "Project Associate"
+    }
+   ]
+  },
+  {
+   "code": "H2",
+   "group": "Enabling Horizontals",
+   "name": "Human Resource Management",
+   "budget": "—",
+   "kpis": [],
+   "milestones": [],
+   "team": [
+    {
+     "person": "vinutha",
+     "designation": "Project Associate"
+    }
+   ]
+  },
+  {
+   "code": "H3",
+   "group": "Enabling Horizontals",
+   "name": "Infrastructure Management",
+   "budget": "—",
+   "kpis": [],
+   "milestones": [],
+   "team": [
+    {
+     "person": "ashwanth",
+     "designation": "Project Associate"
+    }
+   ]
+  },
+  {
+   "code": "H4",
+   "group": "Enabling Horizontals",
+   "name": "Tech Support",
+   "budget": "₹97.88 L",
+   "kpis": [],
+   "milestones": [],
+   "team": [
+    {
+     "person": "nikunj",
+     "designation": "AVP"
+    },
+    {
+     "person": "sathish",
+     "designation": "Project Lead"
+    }
+   ]
+  },
+  {
+   "code": "H5",
+   "group": "Enabling Horizontals",
+   "name": "Finance & Accounts",
+   "budget": "—",
+   "kpis": [],
+   "milestones": [],
+   "team": [
+    {
+     "person": "lakshmi",
+     "designation": "Project Lead"
+    },
+    {
+     "person": "akila",
+     "designation": "AVP"
+    }
+   ]
+  },
+  {
+   "code": "H6",
+   "group": "Enabling Horizontals",
+   "name": "MarCom",
+   "budget": "₹75 L",
+   "kpis": [],
+   "milestones": [],
+   "team": [
+    {
+     "person": "akila",
+     "designation": "AVP"
+    },
+    {
+     "person": "devanathan",
+     "designation": "Project Lead"
+    },
+    {
+     "person": "kalai",
+     "designation": "Project Associate"
+    }
+   ]
+  },
+  {
+   "code": "H6-GOV",
+   "group": "Enabling Horizontals",
+   "name": "Government Communications",
+   "budget": "—",
+   "kpis": [],
+   "milestones": [],
+   "team": [
+    {
+     "person": "akila",
+     "designation": "AVP"
+    },
+    {
+     "person": "saranya",
+     "designation": "Project Associate"
+    }
+   ]
+  },
+  {
+   "code": "H6-SOC",
+   "group": "Enabling Horizontals",
+   "name": "Social Media",
+   "budget": "—",
+   "kpis": [],
+   "milestones": [],
+   "team": [
+    {
+     "person": "akila",
+     "designation": "AVP"
+    },
+    {
+     "person": "jayagobi",
+     "designation": "Project Lead"
+    }
+   ]
+  },
+  {
+   "code": "MER",
+   "group": "Enabling Horizontals",
+   "name": "Monitoring, Evaluation & Reporting (PMO)",
+   "budget": "—",
+   "kpis": [],
+   "milestones": [],
+   "team": []
+  },
+  {
+   "code": "WeSAFE",
+   "group": "Enabling Horizontals",
+   "name": "WeSAFE",
+   "budget": "—",
+   "kpis": [],
+   "milestones": [],
+   "team": [
+    {
+     "person": "akila",
+     "designation": "AVP"
+    },
+    {
+     "person": "vinutha",
+     "designation": "Project Associate"
+    }
+   ]
+  }
+ ]
+}

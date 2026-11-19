@@ -21,6 +21,7 @@ const PATHS: Record<string, string> = {
   file: 'M7 3h7l5 5v13H7zM14 3v5h5',
   alert: 'M12 4l9 16H3zM12 10v4M12 17v.5',
   edit: 'M4 20h4L19 9l-4-4L4 16zM13 7l4 4',
+  flag: 'M5 21V4M5 4h11l-2 4 2 4H5',
   search: 'M11 18a7 7 0 100-14 7 7 0 000 14zM20 20l-4-4',
 };
 

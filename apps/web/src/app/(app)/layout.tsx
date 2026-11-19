@@ -19,6 +19,7 @@ const NAV: NavItem[] = [
   { href: '/leave', label: 'Leave', icon: 'sun' },
   { href: '/duty', label: 'On duty', icon: 'briefcase' },
   { href: '/approvals', label: 'Approvals', icon: 'check' },
+  { href: '/projects', label: 'Projects', icon: 'flag' },
   { href: '/people', label: 'People', icon: 'people' },
   { href: '/calendar', label: 'Holidays and notices', icon: 'calendar' },
 ];
