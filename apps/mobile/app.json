@@ -8,6 +8,7 @@
     "android": {
       "package": "in.startuptn.staff",
       "versionCode": 1,
+      "googleServicesFile": "./google-services.json",
       "permissions": [
         "ACCESS_COARSE_LOCATION",
         "ACCESS_FINE_LOCATION",

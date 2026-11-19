@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 import { api, errorText } from './api';
 import { Button, Card, Chips, Err, Field, Heading, Page, addDays, istToday, niceDate, statusText, useLoad, validDate } from './kit';
-import { Notice, Sheet, s } from './ui';
+import { Notice, Sheet, s, Text } from './ui';
 
 interface Balance { leaveTypeId: string; name: string; unlimited: boolean; balance: number; available: number; pending: number; allowHalfDay: boolean }
 interface LeaveType { id: string; name: string; allowHalfDay: boolean }

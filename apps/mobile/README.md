@@ -32,3 +32,7 @@ Install **Expo Go** from the Play Store, run `npx expo start` here, and scan the
 - Sign-in uses the same email login as the demo site. Google sign-in comes with the Google setup.
 - Presence checks appear when the app is open or when a push notification arrives. Server-sent push for closed apps is the next step (phones are already registered for it).
 - Leave, on-duty and approvals are still on the website; the app has check-in/out, breaks, presence checks and tracking.
+
+## Projects tab
+
+The Projects tab lists the projects you are mapped to, with KPI progress and milestones. Inside a project you can add a figure to a KPI, write and submit a milestone report. HR admins and super admins also see the entries and reports waiting for review and can approve, decline or return them. It uses the same `/api/projects` endpoints as the website, so the rules are identical (only approved figures count; a locked project cannot be changed).

@@ -1,8 +1,8 @@
 import React, { useRef, useState } from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 import { CameraView, useCameraPermissions } from 'expo-camera';
 import * as ImageManipulator from 'expo-image-manipulator';
-import { Button, Notice, Sheet, s } from './ui';
+import { Button, Notice, Sheet, s, Text } from './ui';
 
 /** Takes the selfie and shrinks it to a small JPEG (the server accepts up to about 300 KB). */
 export function SelfieSheet({ open, onDone, onCancel }: { open: boolean; onDone: (base64: string) => void; onCancel: () => void }) {

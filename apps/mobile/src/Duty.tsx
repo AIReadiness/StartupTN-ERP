@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Text } from 'react-native';
+import {  } from 'react-native';
 import { api, errorText } from './api';
 import { Button, Card, Chips, Err, Field, Heading, Page, istToday, niceDate, statusText, useLoad, validDate, validTime } from './kit';
-import { Notice, s } from './ui';
+import { Notice, s, Text } from './ui';
 
 type DutyToday =
   | { onDuty: false }

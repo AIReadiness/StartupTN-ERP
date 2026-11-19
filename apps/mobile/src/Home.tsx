@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { AppState, RefreshControl, ScrollView, Text, TextInput, View } from 'react-native';
+import { AppState, RefreshControl, ScrollView, TextInput, View } from 'react-native';
 import * as Location from 'expo-location';
 import * as Notifications from 'expo-notifications';
 import { api, errorText } from './api';
@@ -7,10 +7,10 @@ import { useSession } from './auth';
 import { SelfieSheet } from './Selfie';
 import { startTracking, stopTracking } from './tracking';
 import type { TodayAttendance, TrackState } from './types';
-import { Button, Notice, Sheet, colors, s } from './ui';
+import { Bar, Ring, Row, Section, hm as hmShort } from './parts';
+import { Button, FONT, Icon, Notice, Sheet, colors, s, Text } from './ui';
 
 const clock = (iso: string) => new Date(iso).toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', hour12: true, timeZone: 'Asia/Kolkata' });
-const hm = (m: number) => `${Math.floor(m / 60)}h ${String(m % 60).padStart(2, '0')}m`;
 
 async function readLocation() {
   const perm = await Location.requestForegroundPermissionsAsync();
@@ -28,9 +28,24 @@ const AWAY_KINDS = [
   { value: 'other', label: 'Other' },
 ] as const;
 
-export function Home() {
+interface Dash {
+  month: { summary: { present: number; halfDay: number; absent: number; leave: number; od: number; late: number; workedMinutes: number } };
+  leaveBalances: { leaveTypeId: string; name: string; unlimited: boolean; entitlement: number; used: number; available: number; year: number }[];
+  approvals: { waiting: number };
+  holidays: { date: string; name: string; optional: boolean }[];
+}
+
+const greeting = (d: Date) => {
+  const h = (d.getUTCHours() + 5 + (d.getUTCMinutes() + 30 >= 60 ? 1 : 0)) % 24;
+  return h < 12 ? 'Good morning' : h < 17 ? 'Good afternoon' : 'Good evening';
+};
+const holidayDate = (iso: string) => new Date(`${iso.slice(0, 10)}T00:00:00Z`).toLocaleDateString('en-IN', { weekday: 'short', day: 'numeric', month: 'short', timeZone: 'UTC' });
+
+export function Home({ onNavigate }: { onNavigate?: (tab: 'leave' | 'approvals') => void }) {
   const { user, logout } = useSession();
   const [today, setToday] = useState<TodayAttendance | null>(null);
+  const [dash, setDash] = useState<Dash | null>(null);
+  const [now, setNow] = useState(() => new Date());
   const [track, setTrack] = useState<TrackState | null>(null);
   const [error, setError] = useState('');
   const [note, setNote] = useState('');
@@ -52,6 +67,7 @@ export function Home() {
       setToday(t);
       setTrack(k);
       setError('');
+      api<Dash>('/dashboard').then(setDash).catch(() => {});
       return { t, k };
     } catch (e) {
       setError(errorText(e));
@@ -71,6 +87,11 @@ export function Home() {
       await stopTracking();
       setTrackNote('');
     }
+  }, []);
+
+  useEffect(() => {
+    const t = setInterval(() => setNow(new Date()), 1000);
+    return () => clearInterval(t);
   }, []);
 
   useEffect(() => { void load().then((r) => syncTracking(r?.k ?? null)); }, [load, syncTracking]);
@@ -203,43 +224,90 @@ export function Home() {
   const onBreak = today.breaks?.onBreak;
   const status = today.info.holiday ? `Holiday: ${today.info.holiday}` : today.info.leave ? `On leave: ${today.info.leave}` : today.info.weeklyOff ? 'Weekly off' : null;
   const asking = !!track?.away && !track.away.explained && Date.now() > awaySnooze;
+  const open = today.openSince ? Math.max(0, Math.floor((now.getTime() - new Date(today.openSince).getTime()) / 60_000)) : 0;
+  const worked = (today.day?.workedMinutes ?? 0) + (checkedIn ? open : 0);
+  const clockText = now.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', timeZone: 'Asia/Kolkata' });
+  const sec = now.toLocaleTimeString('en-GB', { second: '2-digit', timeZone: 'Asia/Kolkata' }).slice(-2);
+  const sum = dash?.month.summary;
+  const statusLine = checkedIn ? (onBreak ? 'On a break (counts as work time)' : `In since ${today.openSince ? clock(today.openSince) : ''}`) : today.state === 'checked_out' ? 'Checked out for today' : 'Not checked in yet';
 
   return (
     <View style={s.screen}>
       <ScrollView contentContainerStyle={s.pad} refreshControl={<RefreshControl refreshing={refreshing} onRefresh={refresh} />}>
-        <Text style={s.muted}>Hello</Text>
-        <Text style={s.h1}>{user?.fullName}</Text>
-        <Text style={[s.muted, { marginBottom: 14 }]}>{new Date().toLocaleDateString('en-IN', { weekday: 'long', day: 'numeric', month: 'long', timeZone: 'Asia/Kolkata' })}</Text>
+        <Text style={s.h1}>{greeting(now)}, {user?.fullName.split(' ')[0]}</Text>
+        <Text style={[s.muted, { marginTop: 2, marginBottom: 14 }]}>{now.toLocaleDateString('en-IN', { weekday: 'short', day: 'numeric', month: 'short', timeZone: 'Asia/Kolkata' })}</Text>
 
         {status ? <Notice text={status} /> : null}
         {error ? <Notice tone="error" text={error} /> : null}
         {trackNote ? <Notice text={trackNote} /> : null}
         {today.attendanceMethod === 'biometric' && !today.canPunch ? <Notice text="Your attendance is taken on the biometric machine." /> : null}
 
-        <View style={{ backgroundColor: colors.white, borderRadius: 16, padding: 18, marginVertical: 10, borderWidth: 1, borderColor: colors.line }}>
-          <Text style={s.muted}>Worked today</Text>
-          <Text style={[s.h1, { fontSize: 34 }]}>{hm(today.day?.workedMinutes ?? 0)}</Text>
-          <Text style={s.muted}>{checkedIn ? (onBreak ? 'On break (counts as work time)' : `Checked in since ${today.openSince ? clock(today.openSince) : ''}`) : today.state === 'checked_out' ? 'Checked out' : 'Not checked in'}</Text>
+        <View style={{ backgroundColor: colors.white, borderRadius: 14, padding: 18, marginTop: 6, borderWidth: 1, borderColor: colors.line, alignItems: 'center' }}>
+          <Ring fraction={worked / Math.max(today.rules.fullDayMinutes, 1)}>
+            <Text style={{ fontFamily: FONT.display, fontSize: 40, color: colors.ink }}>{clockText}<Text style={{ fontSize: 15, color: colors.muted }}> {sec}</Text></Text>
+            <Text style={s.muted}>India time</Text>
+            <Text style={[s.body, { marginTop: 4 }]}>{worked ? `${hmShort(worked)} worked` : 'No hours yet'}</Text>
+          </Ring>
+          <Text style={[s.body, { marginTop: 14 }]}>{statusLine}</Text>
           {today.canPunch && (today.canCheckIn || today.canCheckOut) ? (
-            <Button title={checkedIn ? 'Check out' : 'Check in'} onPress={() => begin(checkedIn ? 'check-out' : 'check-in')} busy={busy} kind={checkedIn ? 'danger' : 'primary'} />
+            <View style={{ alignSelf: 'stretch' }}>
+              <Button title={checkedIn ? 'Check out' : 'Check in'} onPress={() => begin(checkedIn ? 'check-out' : 'check-in')} busy={busy} kind={checkedIn ? 'danger' : 'primary'} />
+              <Text style={[s.muted, { textAlign: 'center', fontSize: 12 }]}>This opens the camera and reads your location. Nothing is recorded before that.</Text>
+            </View>
+          ) : null}
+          {checkedIn ? (
+            <View style={{ alignSelf: 'stretch', marginTop: 4 }}>
+              {onBreak ? <Button title="I am back at work" onPress={() => void doBreak('end')} busy={busy} />
+                       : <Button title="Out for lunch or a break" kind="quiet" onPress={() => void doBreak('start')} busy={busy} />}
+            </View>
           ) : null}
         </View>
 
-        {checkedIn ? (
-          onBreak ? <Button title="I am back at work" onPress={() => void doBreak('end')} busy={busy} />
-                  : <Button title="Out for lunch or a break" kind="quiet" onPress={() => void doBreak('start')} busy={busy} />
+        {today.events.length ? (
+          <Section title="Today">
+            {today.events.map((e, i) => (
+              <View key={e.id} style={{ flexDirection: 'row', justifyContent: 'space-between', paddingVertical: 11, paddingHorizontal: 14, borderBottomWidth: i === today.events.length - 1 ? 0 : 1, borderBottomColor: colors.wash }}>
+                <Text style={[s.body, { fontWeight: '600', color: e.type === 'check_in' ? colors.peacock : colors.muted }]}>{e.type === 'check_in' ? 'Checked in' : 'Checked out'}  {clock(e.at)}</Text>
+                <Text style={s.muted}>{e.geofenceName ? `At ${e.geofenceName}` : e.withinGeofence === false ? 'Outside the office' : ''}</Text>
+              </View>
+            ))}
+          </Section>
         ) : null}
 
-        {today.events.length ? (
+        {dash && dash.approvals.waiting > 0 ? (
           <View style={{ marginTop: 14 }}>
-            <Text style={[s.body, { fontWeight: '700' }]}>Today</Text>
-            {today.events.map((e) => (
-              <Text key={e.id} style={s.body}>{e.type === 'check_in' ? 'In' : 'Out'} {clock(e.at)}{e.geofenceName ? `, ${e.geofenceName}` : e.withinGeofence === false ? ', outside the office' : ''}</Text>
-            ))}
+            <Notice text={`You have ${dash.approvals.waiting} request${dash.approvals.waiting === 1 ? '' : 's'} waiting for approval. Open Approvals below.`} />
           </View>
         ) : null}
 
-        <View style={{ marginTop: 30 }}><Button title="Sign out" kind="quiet" onPress={() => void logout()} /></View>
+        {dash?.leaveBalances.length ? (
+          <Section title="Leave balance" action="Apply for leave" onAction={() => onNavigate?.('leave')}>
+            {dash.leaveBalances.map((b, i) => (
+              <Bar key={b.leaveTypeId} label={b.name} available={b.unlimited ? 'No limit' : String(b.available)} used={b.used} total={b.entitlement}
+                caption={b.unlimited ? `${b.used} taken` : `${b.used} used · ${b.entitlement} this year`} last={i === dash.leaveBalances.length - 1} />
+            ))}
+          </Section>
+        ) : null}
+
+        {sum ? (
+          <Section title="This month">
+            <Row label="Present" value={String(sum.present + sum.halfDay * 0.5)} note={sum.halfDay ? `incl. ${sum.halfDay} half` : undefined} />
+            <Row label="Late arrivals" value={String(sum.late)} />
+            <Row label="Leave and on duty" value={String(sum.leave + sum.od)} />
+            <Row label="Absent" value={String(sum.absent)} tone={sum.absent ? 'bad' : undefined} />
+            <Row label="Hours worked" value={hmShort(sum.workedMinutes)} last />
+          </Section>
+        ) : null}
+
+        {dash?.holidays.length ? (
+          <Section title="Coming up">
+            {dash.holidays.slice(0, 5).map((h, i, arr) => <Row key={h.date + h.name} label={holidayDate(h.date)} value={h.name} last={i === arr.length - 1} />)}
+          </Section>
+        ) : null}
+
+        <View style={{ marginTop: 24 }}>
+          <Button title="Sign out" kind="quiet" onPress={() => void logout()} />
+        </View>
       </ScrollView>
 
       <Sheet open={phase === 'consent'} title="Before you check in">

@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { Pressable, RefreshControl, ScrollView, Text, TextInput, View } from 'react-native';
+import { Pressable, RefreshControl, ScrollView, TextInput, View } from 'react-native';
 import { api, errorText } from './api';
-import { Button, Notice, colors, s } from './ui';
+import { Button, Notice, colors, s, Text } from './ui';
 
 export const istToday = () => new Date(Date.now() + 5.5 * 3600_000).toISOString().slice(0, 10);
 export const addDays = (iso: string, n: number) => new Date(new Date(`${iso}T00:00:00Z`).getTime() + n * 86_400_000).toISOString().slice(0, 10);

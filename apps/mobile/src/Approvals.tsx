@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Text } from 'react-native';
+import {  } from 'react-native';
 import { api, errorText } from './api';
 import { Button, Card, Err, Field, Page, niceDate, useLoad } from './kit';
-import { Sheet, s } from './ui';
+import { Sheet, s, Text } from './ui';
 
 interface Item { approvalRequestId: string; typeLabel: string; summary: string; submittedAt: string; requester: { fullName: string; designation: string | null }; stepNumber: number; totalSteps: number }
 

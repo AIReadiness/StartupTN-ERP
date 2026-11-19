@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "575793214226",
+    "project_id": "startuptn-erp",
+    "storage_bucket": "startuptn-erp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:575793214226:android:0073c4ffc411c7369279cb",
+        "android_client_info": {
+          "package_name": "in.startuptn.staff"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCx7fiBR01eZgxiTrNik2UHHYm2_PFByY4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -38,7 +38,7 @@ export function SessionProvider({ children }: { children: React.ReactNode }) {
     if (!(await getToken())) return setUser(null);
     try {
       const me = await api<any>('/me');
-      setUser({ id: me.id, fullName: me.fullName ?? me.full_name, empCode: me.empCode });
+      setUser({ id: me.id, fullName: me.fullName ?? me.full_name, empCode: me.empCode, roles: me.roles ?? [], isManager: !!me.isManager });
       void registerPush();
     } catch (e: any) {
       if (e?.status === 401) { await clearToken(); setUser(null); }

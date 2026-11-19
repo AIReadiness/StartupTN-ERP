@@ -29,4 +29,4 @@ export interface TrackState {
   away: { id: string; leftAt: string; explained: boolean } | null;
   recorded?: boolean;
 }
-export interface Profile { id: string; fullName: string; empCode?: string }
+export interface Profile { id: string; fullName: string; empCode?: string; roles: string[]; isManager: boolean }

@@ -8,17 +8,19 @@ import { Duty } from './Duty';
 import { Home } from './Home';
 import { Leave } from './Leave';
 import { Login } from './Login';
+import { Projects } from './Projects';
 import { colors, s } from './ui';
 
 Notifications.setNotificationHandler({
   handleNotification: async () => ({ shouldShowAlert: true, shouldPlaySound: true, shouldSetBadge: false }),
 });
 
-type Tab = 'today' | 'leave' | 'duty' | 'approvals';
+type Tab = 'today' | 'leave' | 'duty' | 'projects' | 'approvals';
 const TABS: { id: Tab; label: string }[] = [
   { id: 'today', label: 'Today' },
   { id: 'leave', label: 'Leave' },
   { id: 'duty', label: 'On duty' },
+  { id: 'projects', label: 'Projects' },
   { id: 'approvals', label: 'Approvals' },
 ];
 
@@ -40,6 +42,7 @@ function Shell() {
         <View style={{ flex: 1, display: tab === 'today' ? 'flex' : 'none' }}><Home /></View>
         <View style={{ flex: 1, display: tab === 'leave' ? 'flex' : 'none' }}><Leave /></View>
         <View style={{ flex: 1, display: tab === 'duty' ? 'flex' : 'none' }}><Duty /></View>
+        <View style={{ flex: 1, display: tab === 'projects' ? 'flex' : 'none' }}><Projects /></View>
         <View style={{ flex: 1, display: tab === 'approvals' ? 'flex' : 'none' }}><Approvals onCount={onCount} /></View>
       </View>
       <View style={{ flexDirection: 'row', borderTopWidth: 1, borderTopColor: colors.line, backgroundColor: colors.white }}>
