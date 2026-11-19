@@ -173,7 +173,6 @@ function Resources({ admin, onChanged }: { admin: boolean; onChanged: () => void
   async function act(fn: () => Promise<unknown>) {
     try { await fn(); await reload(); onChanged(); } catch (e) { toast(errorText(e), 'error'); }
   }
-  const unmapped = data.people.filter((p) => p.projects.length === 0);
 
   return (
     <div>
@@ -185,9 +184,6 @@ function Resources({ admin, onChanged }: { admin: boolean; onChanged: () => void
           ))}
         </div>
       </div>
-      {admin && unmapped.length > 0 && (
-        <div className="mb-5"><Notice>{unmapped.length} {unmapped.length === 1 ? 'person is' : 'people are'} not on any project: {unmapped.map((p) => p.fullName).join(', ')}.</Notice></div>
-      )}
 
       {mode === 'project' && byGroup(data.projects).map(({ group, items }) => (
         <Section key={group} title={group}>
